@@ -21,6 +21,8 @@
 		<link rel="stylesheet" href="stylesheets/font-awesome.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="stylesheets/jquery.alerts.css" type="text/css" media="screen">
 		<link href="stylesheets/lang/polyglot-language-switcher.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheets/busqueda.css" type="text/css" media="screen">
+		<link href="stylesheets/main.css" type="text/css" rel="stylesheet" media="screen">
 		<script src="scripts/jquery-1.11.0.min.js" type="text/javascript"></script>
 		<script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="scripts/js_func.js" charset="utf-8"></script>
@@ -74,18 +76,29 @@
 <!-- 		<link rel="icon" type="image/png" href="images/favicon4.png" /> -->
 	</head>
 	<body>
-		<div class="wraper" id="cabecera">
+		<div class="dockbar">
+			<div class="wraper">
+				<div class="social-nav-header">	
+						<a href="#">Inicio</a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+				</div>
+				
+			</div>
+		</div>
+		<div id="cabecera" class="wraper amp-space-down-20">
 	 		<header class="header">
 	  			<a class="logo" href=""><img src="images/logo3d.png" /></a>
-	  			<h2 id="title">&nbsp;<fmt:message key="header.title"/></h2>
-	  			<nav id="mobilenav">
-		     		<ul>
-		       			<li><a href="principalinicial.jsp"><fmt:message key="header.inicio"/></a></li>
-		     		</ul>
-	  			</nav>
+	  			<h2 id="title" class="amp-titulo-lengenda">&nbsp;<fmt:message key="header.title"/></h2>
+<!-- 	  			<nav id="mobilenav"> -->
+<!-- 		     		<ul> -->
+<!-- 		       			<li><a href="principalinicial.jsp"><fmt:message key="header.inicio"/></a></li> -->
+<!-- 		     		</ul> -->
+<!-- 	  			</nav> -->
 	    		<nav id="defaultnav">
 					<ul>
-						<li><a href="principalinicial.jsp"><fmt:message key="header.inicio"/></a></li>
+<!-- 						<li><a href="principalinicial.jsp"><fmt:message key="header.inicio"/></a></li> -->
 				        <li style="background: none" class="wimage">
 <!-- 				        <fmt:message key="header.idiomas"/> -->
 				        <div id="polyglotLanguageSwitcher">
@@ -108,5 +121,6 @@
 				</nav> 
 	 		</header>
 		</div>
+		<hr class="blue-line amp-space-down-30"/>
 		<form id="formLang" action="servletRolecar?accion=reservar" method="post"><input name="idioma" id="idioma" type="hidden" value="es" /></form>
 		

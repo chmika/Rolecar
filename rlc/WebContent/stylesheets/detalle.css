@@ -17,20 +17,7 @@
 	border-radius:5px;
 }
 
-#cabecera
-{
-	border-bottom:8px solid #f4f1f1;
-	
-}
 
-.capacarrousel
-{
-	
-	/*background-color: #3fa3c9;*/
-	height: 150px;
-    padding-top: 30px;
-	
-}
 
 .clear:after {
     clear: both;
@@ -241,61 +228,16 @@ ul.bullet li{
 	font-size: 1em;
 }
 
-/*******************boton*******************/
-.boton{
-    background:#3D9FC3;
-    background-image: -o-linear-gradient(bottom, #3D9FC3 0%, #62ADCA 100%);
-	background-image: -moz-linear-gradient(bottom, #3D9FC3 0%, #62ADCA 100%);
-	background-image: -webkit-linear-gradient(bottom, #3D9FC3 0%, #62ADCA 100%);
-	background-image: -ms-linear-gradient(bottom, #3D9FC3 0%, #62ADCA 100%);
-	background-image: linear-gradient(to bottom, #3D9FC3 0%, #62ADCA 100%);  
-    border: 1px solid #125CB5;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px; 
-    border-radius: 5px;
-    -moz-box-shadow: 0 1px 1px #71C0FD inset;
-    -webkit-box-shadow: 0 1px 1px #71C0FD inset;
-    -o-box-shadow: 0 1px 1px #71C0FD inset;
-    box-shadow: 0 1px 1px #71C0FD inset;
-    padding-top:0.5em;
-    padding-bottom:0.5em;
-    color: white;
-    font-weight:bold;
-    text-decoration:none;
-}
-.boton:hover {
-     border-top-color: #28597a;
-     background: #28597a;
-     color: #ccc;  
-     cursor: pointer;
-}
 
-.botones
-{
-	margin-left:25px;
-	text-transform: uppercase;
-}
 
 
 /***********************************Cajas izquierda y derecha **************************/
 .content
 {
-	border: 1px solid #666666;
-	border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
-    width:17%;
     background-color: #F7F7F7;
     padding:10px;
-    margin:8px;
-    
-	
 }
 
-.contentleft
-{
-	float:left;
-}
 
 .contentlistado
 {
@@ -310,10 +252,7 @@ ul.bullet li{
 	margin-top:10px;
 }
 
-.campoleft
-{
-    margin: 10px 0;	
-}
+
 
 .cajas
 {

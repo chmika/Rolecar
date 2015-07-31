@@ -253,7 +253,139 @@ $( document ).ready(function() {
 	
 <!-- </head> -->
 <!-- <body> -->
-	<br/>
+<!-- <div id="busquedaestaciones" class="content contentleft"> -->
+			<div class="wraper homeone">
+			   <form id="formBuscador" class="amp-clear-floats amp-space-down-30" action="servletRolecar?accion=buscar" method="post">
+			 	<div id="tvhiculo" class="amp-contenedor-botones amp-space-down-30" style="display: none" >
+			 	    <input type="radio" id="tvhiculo1" name="tvhiculo" value="CR"><label for="tvhiculo1"><fmt:message key="list.busca.car"/></label>
+					<input type="radio" id="tvhiculo2" name="tvhiculo" value="TR" ><label for="tvhiculo2"><fmt:message key="list.busca.van"/></label>
+				</div>
+				<div id="tsucursal" class="amp-contenedor-botones amp-space-down-10 ui-buttonset" >
+				    <label for="tsucursal1" class="ui-state-active ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left" role="button"><span class="ui-button-text"><fmt:message key="busqueda.misma.oficina"/></span></label>
+				    <input id="tsucursal1" class="amp-hidden" type="radio"  name="tsucursal" value="tsucursal1">
+					<label for="tsucursal2" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button"><span class="ui-button-text"><fmt:message key="busqueda.distinta.oficina"/></span></label>
+					<input id="tsucursal2" class="amp-hidden" type="radio"  name="tsucursal" value="tsucursal2">
+					
+				</div>
+				<div id="Campos">
+				    <div class="campoleft">      
+						<input id="station"  name="station" class="cajas" type="text" placeholder="<fmt:message key='busqueda.station.text'/>" />
+						<input type="hidden" id="stationid" name="stationid" />
+						
+					</div>
+					<div class="campoleft">
+					    <input id="stationOrig"  name="stationOrig" class="cajas" type="text"  style="display: none;" placeholder="Dónde" onclick="borrarContenidoStation('stationOrig')"/>
+						<input type="hidden" id="stationOrigid" name="stationOrigid" />
+					</div>
+					<div class="campoleft">
+					    
+						<input id="stationDest"  name="stationDest" class="cajas" type="text"  style="display: none;" placeholder="A" onclick="borrarContenidoStation('stationDest')"/>
+						<input type="hidden" id="stationDestid" name="stationDestid" />
+					</div>
+					<div class="campoleft amp-space-left-30">
+						  <span class="input-group amp-boton-icono"><i class="fa fa-arrow-up fa-fw"></i></span>
+				    </div>
+				    <div class="campoleft  amp-space-left-10">
+						  <input id="fini"  name="fini" class="control-fecha amp-width-100" type="text" readonly />
+					</div>
+					<div class="campoleft  amp-space-left-10">
+					   		
+					   	<span class="input-group amp-boton-icono"><i class="fa fa-clock-o fa-fw"></i></span>
+					   	
+					</div>
+					<div class="campoleft amp-space-left-10">		
+						<select id="hinis" class="seleccion horas" name="hinis">
+						    <%
+						      for(int hor=0;hor<24;hor++)
+							    {
+						    	   if(hor<10)
+						    	   {   
+								       cero="0";
+								       selec="";
+						    	   }
+						    	   else if(hor==12)
+						    	   {
+						    			selec="selected='selected'";
+						    			cero="";
+						    	   }
+						    	   else
+						    	   {
+						    		   cero="";
+						    		   selec="";
+						    	   }
+						    	   
+						    	   %>  
+						    	      <option value="<%=cero+hor%>:00" <%=selec%>><%=cero+hor%>:00</option>
+						    	      <option value="<%=cero+hor%>:30"><%=cero+hor%>:30</option>
+						    	   <%
+						    	    	   
+							    }
+						    %>
+										
+						</select>
+						<input type="hidden" id="hini" name="hini" />
+						<input type="hidden" id="mini" name="mini" />
+					</div>
+					
+					<div class="campoleft amp-space-left-30">
+					        <span class="input-group amp-boton-icono"><i class="fa fa-arrow-down fa-fw"></i></span>
+					        
+					</div>
+					<div class="campoleft amp-space-left-10">
+							<input id="ffin" name="ffin" type="text"  class="amp-width-100" readonly />
+					</div>
+					<div class="campoleft amp-space-left-10">
+					    <span class="input-group amp-boton-icono"><i class="fa fa-clock-o fa-fw"></i></span>
+					    
+					</div>
+					<div class="campoleft amp-space-left-10">
+						<select id="hfins" class="seleccion" name="hfins">
+							 <%
+						      for(int hor=0;hor<24;hor++)
+							    {
+						    	   if(hor<10)
+						    	   {   
+								       cero="0";
+								       selec="";
+						    	   }
+						    	   else if(hor==12)
+						    	   {
+						    			selec="selected='selected'";
+						    			cero="";
+						    	   }
+						    	   else
+						    	   {
+						    		   cero="";
+						    		   selec="";
+						    	   }
+						    	   
+						    	   %>  
+						    	      <option value="<%=cero+hor%>:00" <%=selec%>><%=cero+hor%>:00</option>
+						    	      <option value="<%=cero+hor%>:30"><%=cero+hor%>:30</option>
+						    	   <%
+						    	    	   
+							    }
+						    %>
+						</select>
+						<input type="hidden" id="hfin" name="hfin" />
+					    <input type="hidden" id="mfin" name="mfin" />
+					</div>
+					
+					
+				</div>
+				
+				
+
+				
+				<div class="campoleft">
+						<input type="button" class="boton amp-width-100 amp-space-left-30" id="buscar" name="buscar" value="<fmt:message key='list.busca.buscar'/>"/>
+<!-- 						<input type="reset" class="boton" id="borrar" name="borrar" value="BORRAR"/> -->
+			    </div>
+				
+				
+			</form>
+			
+<!-- 			</div> -->
 	<div class="cargandobusqueda"  style="display:none;">
 <!-- 		    <div class="mensaje"><h1>Reidirigiendo...</h1></div> -->
 <!-- 		    <div id="warningGradientOuterBarG"> -->
@@ -324,7 +456,12 @@ $( document ).ready(function() {
 					%>
 			    </div>
 	    </div>
-	    <div id="ordenapor" >
+<!-- 		<div id="buscador"  class="wraper" style="display: block; overflow-y:auto;height: auto;min-width: 1200px;"> -->
+		   <div id="otros" class="content contentleft amp-clear-floats amp-space-down-30 ">
+			   <h2><fmt:message key="list.otras.localidades"/></h2>
+			
+		   </div>
+		<div id="ordenapor" class="amp-space-down-30" >
 			<br/>
 			<fmt:message key="list.order.text"/>
 				<a id="precio" href="#" style="color:white;font-weight: bold;">&nbsp;<fmt:message key="list.order.pvp"/></a> |
@@ -335,12 +472,6 @@ $( document ).ready(function() {
 			<br/>
 		</div>
 		<%} %>
-		<div id="buscador"  style="display: block; overflow-y:auto;height: auto;min-width: 1200px;">
-		   <div id="otros" class="content contentleft">
-			   <h2><fmt:message key="list.otras.localidades"/></h2>
-			
-		   </div>
-		   
 		   <div class="contentlistado">
 		        <%if(!haycoches){ %>
 				<div id="mensajevehiculos" >
@@ -649,145 +780,11 @@ $( document ).ready(function() {
 			<%} %>
 				
 			</div>
-			<div id="busquedaestaciones" class="content contentleft">
-			   <h2><fmt:message key="list.busca.title"/></h2>
-			   <form id="formBuscador" action="servletRolecar?accion=buscar" method="post">
-			 	<div id="tvhiculo" >
-			 	    <input type="radio" id="tvhiculo1" name="tvhiculo" value="CR"><label for="tvhiculo1"><fmt:message key="list.busca.car"/></label>
-					<input type="radio" id="tvhiculo2" name="tvhiculo" value="TR" ><label for="tvhiculo2"><fmt:message key="list.busca.van"/></label>
-				</div>
-				
-				<div id="Campos">
-				    <div class="campoleft">
-				        
-				        <p><fmt:message key="list.busca.of.recogida"/></p>
-						<input id="station"  name="station" class="cajas" type="text" placeholder="p.ej., Madrid" />
-						<input type="hidden" id="stationid" name="stationid" />
-						
-					</div>
-					<div class="campoleft">
-					    <input id="stationOrig"  name="stationOrig" class="cajas" type="text"  style="display: none;" placeholder="Dónde" onclick="borrarContenidoStation('stationOrig')"/>
-						<input type="hidden" id="stationOrigid" name="stationOrigid" />
-					</div>
-					<div class="campoleft">
-					    <p id="ofientrega" style="display:none;"><fmt:message key="list.busca.of.entrega"/></p>
-						<input id="stationDest"  name="stationDest" class="cajas" type="text"  style="display: none;" placeholder="A" onclick="borrarContenidoStation('stationDest')"/>
-						<input type="hidden" id="stationDestid" name="stationDestid" />
-					</div>
-					<div class="campoleft">
-                         
-						  <span class="input-group"><i class="fa fa-calendar fa-fw"></i></span>
-						  <span><fmt:message key="list.busca.f.recogida"/></span>
-						  
-				    </div>
-				    <div class="campoleft">
-						  <input id="fini"  name="fini" class="cajas"  type="text"   readonly >
-					</div>
-					<div class="campoleft">
-					   		
-					   	<span class="input-group"><i class="fa fa-clock-o fa-fw"></i></span>
-					   	<span ><fmt:message key="list.busca.h.recogida"/></span>
-					</div>
-					<div class="campoleft">		
-						<select id="hinis" class="seleccion horas" name="hinis">
-						    <%
-						      for(int hor=0;hor<24;hor++)
-							    {
-						    	   if(hor<10)
-						    	   {   
-								       cero="0";
-								       selec="";
-						    	   }
-						    	   else if(hor==12)
-						    	   {
-						    			selec="selected='selected'";
-						    			cero="";
-						    	   }
-						    	   else
-						    	   {
-						    		   cero="";
-						    		   selec="";
-						    	   }
-						    	   
-						    	   %>  
-						    	      <option value="<%=cero+hor%>:00" <%=selec%>><%=cero+hor%>:00</option>
-						    	      <option value="<%=cero+hor%>:30"><%=cero+hor%>:30</option>
-						    	   <%
-						    	    	   
-							    }
-						    %>
-										
-						</select>
-						<input type="hidden" id="hini" name="hini" />
-						<input type="hidden" id="mini" name="mini" />
-					</div>
-					
-					<div class="campoleft">
-					        <span class="input-group"><i class="fa fa-calendar fa-fw"></i></span>
-					        <span><fmt:message key="list.busca.f.entrega"/></span>
-					</div>
-					<div class="campoleft">
-							<input id="ffin" name="ffin" type="text"  class="cajas" readonly />
-					</div>
-					<div class="campoleft">
-					    <span class="input-group"><i class="fa fa-clock-o fa-fw"></i></span>
-					    <span><fmt:message key="list.busca.h.entrega"/></span>
-					</div>
-					<div class="campoleft">
-						<select id="hfins" class="seleccion" name="hfins">
-							 <%
-						      for(int hor=0;hor<24;hor++)
-							    {
-						    	   if(hor<10)
-						    	   {   
-								       cero="0";
-								       selec="";
-						    	   }
-						    	   else if(hor==12)
-						    	   {
-						    			selec="selected='selected'";
-						    			cero="";
-						    	   }
-						    	   else
-						    	   {
-						    		   cero="";
-						    		   selec="";
-						    	   }
-						    	   
-						    	   %>  
-						    	      <option value="<%=cero+hor%>:00" <%=selec%>><%=cero+hor%>:00</option>
-						    	      <option value="<%=cero+hor%>:30"><%=cero+hor%>:30</option>
-						    	   <%
-						    	    	   
-							    }
-						    %>
-						</select>
-						<input type="hidden" id="hfin" name="hfin" />
-					    <input type="hidden" id="mfin" name="mfin" />
-					</div>
-					
-					
-				</div>
-				
-				
-				<div id="tsucursal" >
-				    <p><fmt:message key="list.busca.sucursal"/></p>
-				    <input type="radio" id="tsucursal1" name="tsucursal" value="tsucursal1"><label for="tsucursal1"><fmt:message key="list.busca.sucursal.eq"/></label>
-					<input type="radio" id="tsucursal2" name="tsucursal" value="tsucursal2"><label for="tsucursal2"><fmt:message key="list.busca.sucursal.ne"/></label>
-					
-				</div>
-				
-				<div class="campoleft">
-						<input type="button" class="boton" id="buscar" name="buscar" value="<fmt:message key='list.busca.buscar'/>"/>
-<!-- 						<input type="reset" class="boton" id="borrar" name="borrar" value="BORRAR"/> -->
-			    </div>
-				
-				
-			</form>
 			
-			</div>
 			
-		</div><!-- Fin buscador -->
+<!-- 		</div>Fin buscador -->
+
+
 	</div><!-- Fin wrap homeone -->
 	<div id="infofinal" class="content_block">
 		<div class="text_bar">

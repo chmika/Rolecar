@@ -71,7 +71,7 @@ if(mensaj.length>0)
 
 </script>
 <script src="scripts/fbusqueda.js"></script>
-<link rel="stylesheet" href="stylesheets/busqueda.css" type="text/css" media="screen">
+
 
 <div class="cargandobusqueda"  style="display:none;" >
     <p align="center"><img src="images/busca_files/europcar.gif" alt="" height="58" width="186">
@@ -82,14 +82,18 @@ if(mensaj.length>0)
 	<h2 align="center"><fmt:message key="busqueda.buscando"/></h2>
 	<p align="center"><img src="images/busca_files/avisbw.gif" alt="" height="58" width="151"> <img src="images/busca_files/sixtbw.gif" alt="" height="58" width="110"> <img src="images/busca_files/alamobw.gif" alt="" height="58" width="126"></p>
 </div>
-<div class="wrape homeone">
-    <div id="formularioBuscador" class="oneByOne_item"  >
+<div class="wraper homeone amp-space-down-30">
+    <div id="formularioBuscador" class="oneByOne_item amp-clear-floats"  >
 			<form id="formBuscador" action="servletRolecar?accion=buscar" method="post">
-			 	<div id="tvhiculo" >
+			 	<div id="tvhiculo" class="amp-contenedor-botones amp-space-down-30" style="display: none" >
 					<input type="radio" id="tvhiculo1" name="tvhiculo" checked="checked" value="CR"><label for="tvhiculo1"><fmt:message key="busqueda.coches"/></label>
 					<input type="radio" id="tvhiculo2" name="tvhiculo" value="TR" ><label for="tvhiculo2"><fmt:message key="busqueda.furgonetas"/></label>
 				</div>
-				
+				<div id="tsucursal" style="" class="amp-contenedor-botones amp-space-down-10 ">
+					<input type="radio" id="tsucursal1" name="tsucursal" checked="checked" value="tsucursal1"><label for="tsucursal1"><fmt:message key="busqueda.misma.oficina"/></label>
+					<input type="radio" id="tsucursal2" name="tsucursal" value="tsucursal2"><label for="tsucursal2"><fmt:message key="busqueda.distinta.oficina"/></label>
+					
+				</div>	
 				<div id="Campos">
 				    <div class="campoleft visible">
 						<input id="station"  name="station" type="text" placeholder="<fmt:message key='busqueda.station.text'/>" />
@@ -104,19 +108,19 @@ if(mensaj.length>0)
 						<input id="stationDest"  name="stationDest" type="text"   placeholder="<fmt:message key='busqueda.stationDest.text'/>" />
 						<input type="hidden" id="stationDestid" name="stationDestid" />
 					</div>
-					<div class="campoleft">
+					<div class="campoleft amp-space-left-30">
 	 
-						  <span id="fechainicial" class="input-group"><i class="fa fa-calendar fa-fw"></i></span>
+						  <span id="fechainicial" class="input-group amp-boton-icono "><i class="fa fa-arrow-up fa-fw"></i></span>
 				    </div>
-				    <div class="campoleft">
-						  <input id="fini"  name="fini" class="control-fecha" type="text"  readonly >
+				    <div class="campoleft amp-space-left-10">
+						  <input id="fini"  name="fini" class="control-fecha amp-width-100" type="text"  readonly >
 					</div>
-					<div class="campoleft">
+					<div class="campoleft amp-space-left-10">
 					   		
-					   	<span id="horainicial" class="input-group"><i class="fa fa-clock-o fa-fw"></i></span>
+					   	<span id="horainicial" class="input-group amp-boton-icono "><i class="fa fa-clock-o fa-fw"></i></span>
 					</div>
-					<div class="campoleft sinborde" >		
-						<select id="hinis" class="seleccion horas" name="hinis" class="control-fecha" style="border:none;height:200px;" >
+					<div class="campoleft sinborde amp-space-left-10" >		
+						<select id="hinis" class="seleccion horas" name="hinis" class="control-fecha " style="border:none;height:200px;" >
 						    <%
 						      for(int hor=0;hor<24;hor++)
 							    {
@@ -149,16 +153,16 @@ if(mensaj.length>0)
 						<input type="hidden" id="mini" name="mini" />
 					</div>
 					
-					<div class="campoleft">
-					        <span id="fechafinal" class="input-group"><i class="fa fa-calendar fa-fw"></i></span>
+					<div class="campoleft amp-space-left-30">
+					        <span id="fechafinal" class="input-group amp-boton-icono"><i class="fa fa-arrow-down fa-fw"></i></span>
 					</div>
-					<div class="campoleft">
-							<input id="ffin" name="ffin" type="text"  class="control-fecha" readonly />
+					<div class="campoleft amp-space-left-10">
+							<input id="ffin" name="ffin" type="text"  class="control-fecha amp-width-100" readonly />
 					</div>
-					<div class="campoleft">
-					    <span id="horafinal" class="input-group"><i class="fa fa-clock-o fa-fw"></i></span>
+					<div class="campoleft amp-space-left-10">
+					    <span id="horafinal" class="input-group amp-boton-icono"><i class="fa fa-clock-o fa-fw"></i></span>
 					</div>
-					<div class="campoleft sinborde">
+					<div class="campoleft sinborde amp-space-left-10">
 						<select id="hfins" class="seleccion" name="hfins" class="control-fecha" style="border:none;height:200px;" >
 							 <%
 						      for(int hor=0;hor<24;hor++)
@@ -190,18 +194,14 @@ if(mensaj.length>0)
 						<input type="hidden" id="hfin" name="hfin" />
 					    <input type="hidden" id="mfin" name="mfin" />
 					</div>
-					<div class="campoleft ajustar">
-						<input type="button" class="boton" id="buscar" name="buscar" value="<fmt:message key='busqueda.buscar'/>"/>
+					<div class="campoleft ajustar ">
+						<input type="button" class="boton amp-width-100 amp-space-left-30" id="buscar" name="buscar" value="<fmt:message key='busqueda.buscar'/>"/>
 <!-- 						<input type="reset" class="boton" id="borrar" name="borrar" value="BORRAR"/> -->
 			        </div>
 				</div>
 				
 				
-				<div id="tsucursal" style="">
-					<input type="radio" id="tsucursal1" name="tsucursal" checked="checked" value="tsucursal1"><label for="tsucursal1"><fmt:message key="busqueda.misma.oficina"/></label>
-					<input type="radio" id="tsucursal2" name="tsucursal" value="tsucursal2"><label for="tsucursal2"><fmt:message key="busqueda.distinta.oficina"/></label>
-					
-				</div>
+
 				
 				
 			</form>
