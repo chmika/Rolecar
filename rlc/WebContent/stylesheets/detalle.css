@@ -31,27 +31,27 @@
     display: block;
 }
 
-.list-detail 
-{
+.list-detail {
 	 text-align: left;
 	 background-color: white; /***#ECEDED;***/
-	
-/* 	 border-radius: 5px; nivel de redondeo (puedes poner cuatro valores, uno para cada esquina) */
-/*      box-shadow: 5px 5px 5px #000; tamaño y color de la sombra */
      border:1px solid #D3D3D3;
-    
-    
-	 
+    width: 100%;
+    padding: 0 20px; 
 }
-
-.list-detail:hover
-{
+.contend-list-cars {
+    display: inline-block;
+    width: 48.6%;
+}
+.contend-list-cars:nth-child(odd) {
+    margin-left: 0;
+}
+.contend-list-cars:nth-child(even) {
+    margin-left: 30px;
+}
+.list-detail:hover {
 	box-shadow:0 2px 10px #3FA3C9;
 	margin-left:0;
 	margin-right:0;
-	border-bottom: 2px solid #3FA3C9;
-	
-	
 }
 
 .Listado
@@ -60,41 +60,24 @@
 	width: 100%;	
 }
 
-
-#ordenapor
-{
-	height: 50px;
-	background-color: #3fa3c9;
-	color: white;
-	text-align:center;
-}
-
-.padding {
-    padding: 0 10px;
-}
-
-.rate
-{
-	color:blue !important;
-}
-
 .resumen
 {
+    text-align: center;
 	cursor: pointer;
 }
 
 
-.vehicle-details p.similar {
+.list-detail p.similar {
     line-height: 1.84em;
     margin-left: 0.5em;
     font-weight: normal;
     float:left;
 }
 
-.vehicle-details h2 {
+.list-detail h2 {
     padding-top: 3px;
 }
-.vehicle-details h2 {
+.list-detail h2 {
     color: #333333;
     float: left;
     font-size: 1.3em;
@@ -106,15 +89,10 @@
 
 .vehicle-details
 {
-	
-/* 	border-radius: 5px; nivel de redondeo (puedes poner cuatro valores, uno para cada esquina) */
-/*     box-shadow: 5px 5px 5px #000; tamaño y color de la sombra */
-/*     border:1px solid; */
-    margin: 5px;
+
     background-color: white;
     display: inline-block;
-    width:55%;
-    min-width: 480px;
+    width: 69.6%;
 }
 
 
@@ -142,12 +120,11 @@
 
 
 .vehicle-details .fixed-left .column.fluid {
-    border-top: 1px solid #E6E6E6;
-    margin: 0 0 0 105px;
+    margin: 0 0 0 115px;
     padding-top: 5px;
 }
 
-.vehicle-details h3 {
+.list-detail h3 {
     font-size: 1.3em;
     margin-bottom: 5px;
     color: #545454;
@@ -155,9 +132,6 @@
 
 .title-detail{
 	font-size: 12px;
-	color: #1B57A5;
-    font-family: Arial,Helvetica,sans-serif;
-	
 }
 
 ul.bullet li{
@@ -202,8 +176,7 @@ ul.bullet li{
 
 .precio .option
 {
-	margin-bottom: 10px;
-    margin-top: 15px;
+    margin: 5px 0;
 }
 
 .precio .option .pay
@@ -241,8 +214,6 @@ ul.bullet li{
 
 .contentlistado
 {
-	float: left;
-    width: 54%;
     margin-bottom:20px;
 	
 }
@@ -359,6 +330,7 @@ top: auto;
 	font-weight:bold;
 	font-family: arial;
 	font-size: 20px;
+    box-sizing: initial;
 }
 
 

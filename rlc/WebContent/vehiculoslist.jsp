@@ -461,16 +461,17 @@ $( document ).ready(function() {
 			   <h2><fmt:message key="list.otras.localidades"/></h2>
 			
 		   </div>
-		<div id="ordenapor" class="amp-space-down-30" >
-			<br/>
+		</div>
+		</div>
+		<div id="ordenapor" class="amp-lista-barraordenar amp-space-down-30" >
 			<fmt:message key="list.order.text"/>
 				<a id="precio" href="#" style="color:white;font-weight: bold;">&nbsp;<fmt:message key="list.order.pvp"/></a> |
 				<a id="tam" href="#" style="color:white;font-weight: bold;">&nbsp;<fmt:message key="list.order.tamano"/></a> |
 				<a id="emi" href="#" style="color:white;font-weight: bold;">&nbsp;<fmt:message key="list.order.co2"/>&nbsp;</a>
 				<form id="fordenar" name="fordenar" method="post" 
 				action="servletRolecar?accion=ordenar&provincia=<%=provincia%>&stationorigid=<%=estacionorigen%>&stationdestid=<%=estaciondestino %>&codStationIn=<%=reser.getCheckinstationId()%>&checkindate=<%=reser.getCheckindate()%>&checkintime=<%=reser.getCheckintime()%>&codStationOut=<%=reser.getCheckoutstationId()%>&checkoutdate=<%=reser.getCheckoutdate()%>&checkouttime=<%=reser.getCheckouttime()%>&carType=<%=cartype%>&Country=<%=pais.getCodcountry()%>&mismaoficina=<%=esMismaSucursal%>&origen=<%=origen%>&destino=<%=destino%>"></form>
-			<br/>
 		</div>
+		<div class="wraper homeone">
 		<%} %>
 		   <div class="contentlistado">
 		        <%if(!haycoches){ %>
@@ -526,31 +527,12 @@ $( document ).ready(function() {
 								
 							}
 							%>
-							  <form id="reservaVehiculo<%=cont%>" name="reservaVehiculo<%=cont%>" action="servletRolecar?accion=contratar" method="post">
-								<div class="list-detail" >
-									<input id="dateco" name="dateco" type="hidden" value="<%=res.getCheckoutdate()%>"/>
-									<input id="dateci" name="dateci" type="hidden" value="<%=res.getCheckindate()%>"/>
-									<input id="timeco" name="timeco" type="hidden" value="<%=res.getCheckouttime()%>"/>
-									<input id="timeci" name="timeci" type="hidden" value="<%=res.getCheckintime()%>"/>
-									<input id="stationco" name="stationco" type="hidden" value="<%=res.getCheckoutstationId()%>"/> 
-									<input id="stationci" name="stationci" type="hidden" value="<%=res.getCheckinstationId()%>"/> 
-									<input id="CTRCT" name="CTRCT" type="hidden" value="<%=c.getContractId()%>"/> 
-									<input id="PROMO" name="PROMO" type="hidden" value=""/> 
-									<input id="IATA" name="IATA" type="hidden" value="01522830"/> 
-									<input id="PERD" name="PERD" type="hidden" value=""/> 
-									<input id="CARLIST" name="CARLIST" type="hidden" value=""/> 
-									<input id="ACRISS" name="ACRISS" type="hidden" value="<%=c.getCarCategoryCode()%>" /> 
-									<input id="ERENTAL" name="ERENTAL" type="hidden" value="" /> 
-									<input id="RENTALCNTRY" name="RENTALCNTRY" type="hidden" value="<%=res.getCountryOfReservation() %>" />
-									<input id="PAISRECOGIDA" name="PAISRECOGIDA" type="hidden" value="<%=paisrecogida %>" />
-									<input id="PAISENTREGA" name="PAISENTREGA" type="hidden" value="<%=paisentrega %>" />
-									<input id="CNTRY" name="CNTRY" type="hidden" value="<%=pais.getCodcountry()%>" />
-									<input id="KM" name="KM" type="hidden" value="<%=c.getQuote().getIncludedKm()%>" />
-									<div class="vehicle-details" id="coche<%=cont%>">
-										<div class="padding clear">
+							  <form id="reservaVehiculo<%=cont%>" class="contend-list-cars" name="reservaVehiculo<%=cont%>" action="servletRolecar?accion=contratar" method="post">
+								<div class="list-detail amp-space-down-30" >
+										<div class="padding clear amp-lista-barratop amp-space-down-10">
 										<%--TEST --<%=c.getContractId()%>--<%=c.getCarCategoryCode()%> --%>
-											<h2><%=c.getCarCategorySample()%></h2>
-											<p class="similar">&nbsp;<fmt:message key="list.similar"/></p>
+											<h2 class="amp-lista-barratop-nombrecoche"><%=c.getCarCategorySample()%></h2>
+											<p class="similar amp-lista-barratop-similar">&nbsp;<fmt:message key="list.similar"/></p>
 											
 											<div id="iconoscar<%=c.getCarCategoryCode()%>" >
 											<%
@@ -587,12 +569,33 @@ $( document ).ready(function() {
 											</div>
 											
 										</div>
+										<h3 class="amp-space-left-115"><b><fmt:message key="list.car.title"/>&nbsp;</b><span class="title-detail"><%=catName[0]%></span></h3>
+									<input id="dateco" name="dateco" type="hidden" value="<%=res.getCheckoutdate()%>"/>
+									<input id="dateci" name="dateci" type="hidden" value="<%=res.getCheckindate()%>"/>
+									<input id="timeco" name="timeco" type="hidden" value="<%=res.getCheckouttime()%>"/>
+									<input id="timeci" name="timeci" type="hidden" value="<%=res.getCheckintime()%>"/>
+									<input id="stationco" name="stationco" type="hidden" value="<%=res.getCheckoutstationId()%>"/> 
+									<input id="stationci" name="stationci" type="hidden" value="<%=res.getCheckinstationId()%>"/> 
+									<input id="CTRCT" name="CTRCT" type="hidden" value="<%=c.getContractId()%>"/> 
+									<input id="PROMO" name="PROMO" type="hidden" value=""/> 
+									<input id="IATA" name="IATA" type="hidden" value="01522830"/> 
+									<input id="PERD" name="PERD" type="hidden" value=""/> 
+									<input id="CARLIST" name="CARLIST" type="hidden" value=""/> 
+									<input id="ACRISS" name="ACRISS" type="hidden" value="<%=c.getCarCategoryCode()%>" /> 
+									<input id="ERENTAL" name="ERENTAL" type="hidden" value="" /> 
+									<input id="RENTALCNTRY" name="RENTALCNTRY" type="hidden" value="<%=res.getCountryOfReservation() %>" />
+									<input id="PAISRECOGIDA" name="PAISRECOGIDA" type="hidden" value="<%=paisrecogida %>" />
+									<input id="PAISENTREGA" name="PAISENTREGA" type="hidden" value="<%=paisentrega %>" />
+									<input id="CNTRY" name="CNTRY" type="hidden" value="<%=pais.getCodcountry()%>" />
+									<input id="KM" name="KM" type="hidden" value="<%=c.getQuote().getIncludedKm()%>" />
+									<div class="vehicle-details" id="coche<%=cont%>">
+
 										<div class="padding">
 										    <div class="fixed-left clear">
 										        <div class="features-container">
 											         
 										             <div class="column fluid">
-										                 <h3><b><fmt:message key="list.car.title"/>&nbsp;</b><span class="title-detail"><%=catName[0]%></span></h3>
+										                 
 										                 <div class="clear" id="carac<%=c.getCarCategoryCode()%>">
 										                 	<div class="col1">
 											                 	<ul class="bullet">
@@ -610,10 +613,7 @@ $( document ).ready(function() {
 																			<li><b>&nbsp;&nbsp;<fmt:message key="list.car.manual"/></b></li>
 																		<%}
 																		%>	
-											                 	</ul>
-										                 	</div>
-										                 	<div class="col2">
-										                 	    <ul class="bullet">
+
 										                 	    <li><b>&nbsp;&nbsp;<fmt:message key="list.car.emision"/>&nbsp;</b><%=c.getCarCategoryCO2Quantity()%>g/Km</li>
 																	<%
 																		if(res!=null)
@@ -623,7 +623,7 @@ $( document ).ready(function() {
 																		if(q!=null)
 																		{ 
 																			if(q.getIncludedKm().contains("UNLIMITED")){%>
-																				<li><b>&nbsp;&nbsp;<fmt:message key="list.car.kms"/>&nbsp;<fmt:message key="list.car.kms.ilimitado"/></li> 
+																				<li><b>&nbsp;&nbsp;<fmt:message key="list.car.kms"/>&nbsp;<fmt:message key="list.car.kms.ilimitado"/></b></li> 
 																			<%}
 																			else{%>
 																				<li><b>&nbsp;&nbsp;<fmt:message key="list.car.kms"/>&nbsp;</b><%=q.getIncludedKm()%> Km</li>
@@ -647,7 +647,7 @@ $( document ).ready(function() {
 										    </div>
 										    <div class="more clear">
 										         <img src="images/logoeuropcar.png" alt="Logo"  class="logoempresa">
-										        <a class="rate" href=""  km="<%=c.getQuote().getIncludedKm()%>" titulo="<%=c.getCarCategorySample()%>" codigo="<%=c.getCarCategoryCode()%>" categoria="<%=catName[0]%>" imagen="<%=c.getCarCategoryCode()%>_<%=pais.getCodcountry()%>.jpeg"
+										        <a class="rate amp-lista-condiciones amp-space-left-115" href=""  km="<%=c.getQuote().getIncludedKm()%>" titulo="<%=c.getCarCategorySample()%>" codigo="<%=c.getCarCategoryCode()%>" categoria="<%=catName[0]%>" imagen="<%=c.getCarCategoryCode()%>_<%=pais.getCodcountry()%>.jpeg"
 										         proteccion="<%=proteccion%>" robo="<%=robo %>" colision="<%=colision %>" accidentesmej="<%=accidentesmej %>" accidentes="<%=accidentes %>" mercancias="<%=mercancias %>" multas="<%=multas %>" adicional="<%=adicional%>">
 										         <fmt:message key="list.car.condiciones"/></a>
 										    </div>
@@ -762,7 +762,7 @@ $( document ).ready(function() {
 <%-- 											<p><b>Pago online: </b><%=q.getCurrency()%> <%=q.getTotalRateEstimateInBookingCurrency()%> </p> --%>
 <%-- 											<p><b>Pago en Oficina: </b> <%=q.getCurrency()%> <%=q.getTotalRateEstimateInRentingCurrency()%> </p> --%>
                                             <div class="botones">
-                                            	<input id="bReserva<%=cont%>" name="bReserva<%=cont%>" code="<%=cont%>" class="boton reserva" type="button" value="<fmt:message key="list.car.reserva"/>" />
+                                            	<input id="bReserva<%=cont%>" name="bReserva<%=cont%>" code="<%=cont%>" class="boton reserva amp-lista-boton" type="button" value="<fmt:message key="list.car.reserva"/>" />
 <%--                                                 <button id="bReserva" code="<%=cont%>" class="boton reserva" type="submit"> --%>
 <%--                                                 <fmt:message key="list.car.reserva"/> --%>
 <!--                                                 </button> -->
@@ -770,8 +770,8 @@ $( document ).ready(function() {
 											
 										</div>
 									<!--Fin de características -->
-								</div><!--Fin de slide -->
-							</form>	<!-- Fin de formulario -->
+								</div><!--Fin de slide jaaaaaaaaaaaaa -->
+							</form>	<!-- Fin de formulario jooooooooooooo -->
 						<%}
 					}
 					%>

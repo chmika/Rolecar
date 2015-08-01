@@ -4,18 +4,21 @@
 .pull-text-right {
   text-align: right; }
 
+.amp-hidden {
+  display: none; }
+
+.campoleft {
+  float: left; }
+
+.amp-clear-floats {
+  overflow: hidden; }
+
 * {
   box-sizing: border-box; }
 
 input[type="text"] {
   padding: 7px;
   border: 1px solid #e3e3e3; }
-
-.amp-hidden {
-  display: none; }
-
-.campoleft {
-  float: left; }
 
 .amp-width-60 {
   width: 60px; }
@@ -56,6 +59,45 @@ input[type="text"] {
 .amp-space-left-80 {
   margin-left: 80px; }
 
+.amp-space-left-115 {
+  margin-left: 115px; }
+
+.amp-space-left-130 {
+  margin-left: 130px; }
+
+.ui-buttonset .ui-button {
+  margin-right: .1em;
+  border-radius: 5px 5px 0 0; }
+
+.ui-button-text-only .ui-button-text {
+  padding: 10px 15px; }
+
+.amp-contenedor-botones {
+  font-size: 1.4em; }
+
+.amp-boton-icono {
+  padding: 6px 4px;
+  border: 1px solid #e3e3e3;
+  display: table-cell;
+  background: #61b4d4;
+  color: white;
+  font-size: 1.36em; }
+
+.boton {
+  background: #61b4d4;
+  color: white;
+  vertical-align: middle;
+  border: 1px solid #e3e3e3;
+  height: 34px; }
+
+.boton:hover {
+  background: #28597a;
+  color: #ccc; }
+
+.amp-lista-boton {
+  margin-top: 14px;
+  float: right; }
+
 .dockbar {
   width: 100%;
   background: #61b4d4;
@@ -84,35 +126,18 @@ input[type="text"] {
   border: #61b4d4 solid 1px;
   height: 2px; }
 
-.ui-buttonset .ui-button {
-  margin-right: .1em;
-  border-radius: 5px 5px 0 0; }
-
-.ui-button-text-only .ui-button-text {
-  padding: 10px 15px; }
-
-.amp-clear-floats {
-  overflow: hidden; }
-
-/*****************botones********************************/
-.amp-contenedor-botones {
-  font-size: 1.4em; }
-
-.amp-boton-icono {
-  padding: 6px 4px;
-  border: 1px solid #e3e3e3;
-  display: table-cell;
-  background: #61b4d4;
+.amp-lista-barraordenar {
+  background-color: #61b4d4;
   color: white;
-  font-size: 1.36em; }
-
-.boton {
-  background: #61b4d4;
-  color: white;
-  vertical-align: middle;
-  border: 1px solid #e3e3e3;
-  height: 34px; }
-
-.boton:hover {
-  background: #28597a;
-  color: #ccc; }
+  text-align: center;
+  padding: 6px 0; }
+.amp-lista-barratop {
+  border-bottom: 1px solid #e3e3e3; }
+  .amp-lista-barratop-nombrecoche {
+    margin-top: 10px; }
+  .amp-lista-barratop-similar {
+    margin-top: 9px; }
+.amp-lista-condiciones {
+  display: block;
+  padding-top: 13px;
+  color: #4b8ceb; }
