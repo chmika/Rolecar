@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- 		<meta name="viewport" content="width=device-width, initial-scale=1"> -->
 		<title>Rolecar</title>
-		
+		<link rel="stylesheet" href="scripts/plugins/rs-plugin/css/settings.css">
 		<link rel="stylesheet" href="stylesheets/jquery-ui.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="stylesheets/flexslider.css" type="text/css" media="screen">
@@ -25,10 +25,13 @@
 		<link href="stylesheets/main.css" type="text/css" rel="stylesheet" media="screen">
 		<script src="scripts/jquery-1.11.0.min.js" type="text/javascript"></script>
 		<script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="scripts/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="scripts/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>	
 		<script type="text/javascript" src="scripts/js_func.js" charset="utf-8"></script>
 		<script src="scripts/jquery.bxslider.min.js"></script>
 		<script src="scripts/jquery.alerts.js"></script>
 		<script src="scripts/lang/jquery.polyglot.language.switcher.js" type="text/javascript"></script>
+
 		<!-- 	Google Analytics -->
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -79,10 +82,10 @@
 		<div class="dockbar">
 			<div class="wraper">
 				<div class="social-nav-header">	
-						<a href="#">Inicio</a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="principalinicial.jsp"><fmt:message key="header.inicio"/></a>
+						<a href="https://twitter.com/rolecar"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.facebook.com/rolecardrive"><i class="fa fa-facebook"></i></a>
+						<a href="https://plus.google.com/u/0/100151209502610081833/posts"><i class="fa fa-google-plus"></i></a>
 				</div>
 				
 			</div>

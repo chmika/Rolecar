@@ -457,13 +457,14 @@ $( document ).ready(function() {
 			    </div>
 	    </div>
 <!-- 		<div id="buscador"  class="wraper" style="display: block; overflow-y:auto;height: auto;min-width: 1200px;"> -->
-		   <div id="otros" class="content contentleft amp-clear-floats amp-space-down-30 ">
-			   <h2><fmt:message key="list.otras.localidades"/></h2>
+
+		</div>
+		</div>
+		<div id="otros" class="amp-otras-localidades content contentleft amp-clear-floats amp-space-down-50 ">
+			<h2><fmt:message key="list.otras.localidades"/></h2>
 			
-		   </div>
 		</div>
-		</div>
-		<div id="ordenapor" class="amp-lista-barraordenar amp-space-down-30" >
+		<div id="ordenapor" class="amp-lista-barraordenar amp-space-down-50" >
 			<fmt:message key="list.order.text"/>
 				<a id="precio" href="#" style="color:white;font-weight: bold;">&nbsp;<fmt:message key="list.order.pvp"/></a> |
 				<a id="tam" href="#" style="color:white;font-weight: bold;">&nbsp;<fmt:message key="list.order.tamano"/></a> |
@@ -528,7 +529,7 @@ $( document ).ready(function() {
 							}
 							%>
 							  <form id="reservaVehiculo<%=cont%>" class="contend-list-cars" name="reservaVehiculo<%=cont%>" action="servletRolecar?accion=contratar" method="post">
-								<div class="list-detail amp-space-down-30" >
+								<div class="list-detail amp-space-down-50" >
 										<div class="padding clear amp-lista-barratop amp-space-down-10">
 										<%--TEST --<%=c.getContractId()%>--<%=c.getCarCategoryCode()%> --%>
 											<h2 class="amp-lista-barratop-nombrecoche"><%=c.getCarCategorySample()%></h2>
@@ -786,27 +787,24 @@ $( document ).ready(function() {
 
 
 	</div><!-- Fin wrap homeone -->
-	<div id="infofinal" class="content_block">
-		<div class="text_bar">
-			<div class="wraper">
-				<h2>
-					<fmt:message key="list.msj.tarifa"/>
-					<span><fmt:message key="list.msj.descuento"/></span>
-				</h2>
-				<div class="widget">
-					<h3><fmt:message key="list.msj.adapta"/></h3>
-						<p align="justify"><fmt:message key="list.msj.negocio"/>
-							<a href="modelonegocio.jsp"><fmt:message key="comun.leer"/></a>
-						</p>
-				</div>
-			</div>
-		</div>
-		<div class="wraper">
-			<div class="features_block">
-				<ul> </ul>
-			</div>
+<div class="amp-text-information">
+	<div class="amp-text-information-content">
+		<div class="amp-text-information-head">Rolecar se adapta a ti<i></i></div>
+		<div>
+			<h2>Rolecar te ofrece la mejor tarifa! ¡Sin intermediarios!</h2>
+			<p>Consigue descuentos de hasta un 70% y reservalo directamente. Negociamos con las mejores compañías de alquiler para ofrecerte el mejor precio.</p>
+			<a href="leerMas.html" class="amp-text-information-button">Leer Más</a>
+			
 		</div>
 	</div>
+</div>
+<!-- 		esta ul vale pa algo? -->
+<!-- 		<div class="wraper"> -->
+<!-- 			<div class="features_block"> -->
+<!-- 				<ul> </ul> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+
 	
 	<div id="msgCargando" style="display:none;">
 			
