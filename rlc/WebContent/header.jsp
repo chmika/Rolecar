@@ -33,6 +33,7 @@
 		<script src="scripts/jquery.bxslider.min.js"></script>
 		<script src="scripts/jquery.alerts.js"></script>
 		<script src="scripts/lang/jquery.polyglot.language.switcher.js" type="text/javascript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
 
 		<!-- 	Google Analytics -->
 		<script>
@@ -82,7 +83,7 @@
 	</head>
 	<body>
 		<div class="dockbar">
-			<div class="wraper">
+			<div class="wraper wraper-margin-horizon-respon">
 				<div class="social-nav-header">	
 						<a href="principalinicial.jsp"><fmt:message key="header.inicio"/></a>
 						<a href="https://twitter.com/rolecar"><i class="fa fa-twitter"></i></a>
@@ -92,10 +93,10 @@
 				
 			</div>
 		</div>
-		<div id="cabecera" class="wraper amp-space-down-20">
+		<div id="cabecera" class="wraper wraper-margin-horizon-respon amp-space-down-20">
 	 		<header class="header">
-	  			<a class="logo" href=""><img src="images/logo3d.png" /></a>
-	  			<h2 id="title" class="amp-titulo-lengenda">&nbsp;<fmt:message key="header.title"/></h2>
+	  			<a class="logo col-md-12 col-sm-12 col-xs-12" href=""><img src="images/logo3d.png" /></a>
+	  			<h2 id="title" class="amp-titulo-lengenda col-md-12 col-sm-12 col-xs-12">&nbsp;<fmt:message key="header.title"/></h2>
 <!-- 	  			<nav id="mobilenav"> -->
 <!-- 		     		<ul> -->
 <!-- 		       			<li><a href="principalinicial.jsp"><fmt:message key="header.inicio"/></a></li> -->

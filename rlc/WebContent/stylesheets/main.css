@@ -22,9 +22,14 @@
   box-sizing: border-box; }
 
 input[type="text"] {
-  padding: 9px;
+  padding: 10px 9px 9px 9px;
   border: 1px solid #e3e3e3; }
 
+input[type="button"] {
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s; }
+
+/* allow space for check mark */
 .amp-space-down-10 {
   margin-bottom: 10px; }
 
@@ -43,6 +48,20 @@ input[type="text"] {
 .amp-space-down-130 {
   margin-bottom: 130px; }
 
+.wraper-margin-horizon-respon {
+  margin-right: 10px;
+  margin-left: 10px; }
+
+@media (min-width: 1255px) {
+  .wraper-margin-horizon-respon {
+    margin-left: 30px;
+    margin-right: 30px;
+    max-width: 1203px;
+    margin: 0 auto; }
+
+  .wraper {
+    max-width: 1203px;
+    margin: 0 auto; } }
 .offset-xs-600 {
   margin-left: 600px; }
 
@@ -1968,11 +1987,7 @@ input[type="text"] {
 		float: none;
 	}
 } */
-[class*="amp-width"] {
-  display: block;
-  width: 100%; }
-
-.amp-formulario-buscador [class*="amp-width"] {
+.amp-formulario-buscador [class*="amp-width-100"] {
   display: block;
   width: 100%; }
 
@@ -2007,7 +2022,8 @@ input {
   color: white;
   vertical-align: middle;
   border: 1px solid #e3e3e3;
-  height: 34px; }
+  height: 34px;
+  padding: 0 21px; }
 
 .boton:hover {
   background: #28597a;
@@ -2148,33 +2164,92 @@ input {
   border: #61b4d4 solid 1px;
   height: 2px; }
 
-.amp-formulario-buscador-titles {
-  display: inline-block;
-  width: 120px;
-  margin: 0 0 5px 238px;
-  font-weight: bold; }
-.amp-formulario-buscador .campoleft {
-  max-height: 32px;
-  margin-bottom: 15px;
-  overflow: hidden; }
-  .amp-formulario-buscador .campoleft .ui-selectmenu-button {
-    width: 100%; }
-.amp-formulario-buscador-container-boton.campoleft {
-  overflow: initial; }
+.amp-formulario-buscador {
+  position: relative;
+  max-width: 1000px; }
+  .amp-formulario-buscador #tsucursal {
+    display: none; }
+  .amp-formulario-buscador-title1 {
+    display: inline-block;
+    width: 120px;
+    margin: 0 0 5px 401px;
+    font-weight: bold; }
+  .amp-formulario-buscador-title2 {
+    display: inline-block;
+    width: 120px;
+    margin: 0 0 5px 155px;
+    font-weight: bold; }
+  .amp-formulario-buscador-estacion {
+    width: 326px; }
+  .amp-formulario-buscador .campoleft {
+    max-height: 32px;
+    margin-bottom: 15px; }
+    .amp-formulario-buscador .campoleft .ui-selectmenu-button {
+      width: 100%; }
+  .amp-formulario-buscador-calendario-input {
+    cursor: pointer; }
+    .amp-formulario-buscador-calendario-input:hover {
+      background-color: #e3e3e3; }
+  .amp-formulario-buscador-container-boton.campoleft {
+    overflow: initial; }
+  .amp-formulario-buscador-container-checkbox {
+    width: 100%;
+    overflow: hidden; }
+  .amp-formulario-buscador-check-label {
+    cursor: pointer; }
+    .amp-formulario-buscador-check-label:before {
+      width: 15px;
+      height: 15px;
+      background: #61b4d4;
+      vertical-align: middle;
+      padding: 2px;
+      cursor: pointer;
+      font-family: FontAwesome;
+      display: inline-block;
+      cursor: pointer;
+      letter-spacing: 10px;
+      content: "";
+      color: white; }
+  .amp-formulario-buscador-check-input {
+    display: none; }
 
-@media (min-width: 599px) and (max-width: 1023px) {
+.amp-formulario-buscador-check-input:checked + .amp-formulario-buscador-check-label:before {
+  content: "\f00c";
+  letter-spacing: 5px; }
+
+@media (max-width: 599px) {
+  .amp-formulario-buscador-check-label:before {
+    margin-left: 9px; } }
+@media (min-width: 600px) and (max-width: 1023px) {
   .amp-formulario-buscador .campoleft {
     padding: 0 5px; }
   .amp-formulario-buscador-container-boton.campoleft {
-    float: right; } }
-@media (min-width: 1023px) and (max-width: 1254px) {
+    float: right; }
+  .amp-formulario-buscador-check-label:before {
+    margin-left: 6px; } }
+@media (min-width: 1024px) and (max-width: 1254px) {
   .amp-formulario-buscador .amp-space-left-10 {
     margin-left: 10px; }
   .amp-formulario-buscador .amp-space-left-30 {
-    margin-left: 30px; } }
-.amp-otras-localidades div {
-  padding: 2px 15px;
-  width: 33.33%; }
+    margin-left: 30px; }
+  .amp-formulario-buscador-container-boton {
+    position: absolute;
+    top: 17px;
+    right: 0; } }
+@media (min-width: 1255px) {
+  .amp-formulario-buscador-container-boton {
+    position: absolute;
+    top: 17px;
+    right: 0; } }
+.amp-map {
+  width: 200px;
+  height: 200px;
+  float: left; }
+
+.amp-otras-localidades {
+  overflow: hidden; }
+  .amp-otras-localidades-box-right div {
+    padding: 2px 15px; }
 
 .amp-lista {
   position: relative; }
@@ -2249,7 +2324,7 @@ input {
       position: initial;
       margin-bottom: 14px;
       width: 100%; } }
-@media (min-width: 599px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .amp-lista {
     position: relative; }
     .amp-lista:nth-child(odd) {
@@ -2271,7 +2346,7 @@ input {
       margin-top: 14px;
       right: 20px;
       bottom: 12px; } }
-@media (min-width: 1023px) and (max-width: 1254px) {
+@media (min-width: 1024px) and (max-width: 1254px) {
   .amp-lista {
     position: relative; }
     .amp-lista-categoria {
@@ -2311,7 +2386,8 @@ input {
   .amp-text-information-content p {
     margin-bottom: 30px;
     line-height: 20px;
-    color: #808b8d; }
+    color: #808b8d;
+    font-size: 14px; }
 .amp-text-information-head {
   font-size: 20px;
   line-height: 38px;
@@ -2329,7 +2405,7 @@ input {
     width: 10px;
     height: 10px;
     margin: -5px 0 0 -5px;
-    background: #2d3e50;
+    background: #61b4d4;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg); }
   .amp-text-information-head:before {
@@ -2337,9 +2413,9 @@ input {
     position: absolute;
     top: 100%;
     left: 50%;
-    width: 370px;
+    width: 80%;
     height: 2px;
-    margin: -1px 0 0 -185px;
+    margin: -1px 0 0 -40%;
     background: rgba(0, 0, 0, 0.05); }
   .amp-text-information-head p {
     max-width: 770px;
@@ -2369,19 +2445,24 @@ input {
       left: -15px; }
 .amp-text-information-button {
   margin: -10px 0 30px;
-  padding: 2px 15px 0;
-  border: 1px solid #2d3e50;
+  padding: 9px 15px;
+  border: 1px solid #61b4d4;
   background: #ecf0f1;
   font-size: 12px;
   line-height: 30px;
-  color: #2d3e50; }
+  color: #61b4d4;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s; }
+  .amp-text-information-button:hover {
+    background: #61b4d4;
+    color: white; }
 
 @media (max-width: 599px) {
   .leftcond, .rightcond {
     width: 100%; } }
 .amp-footer {
   background: #61b4d4;
-  padding: 30px 30px;
+  padding: 30px 0;
   color: white; }
   .amp-footer-contenido a {
     font-size: 2.3em;

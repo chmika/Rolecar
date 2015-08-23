@@ -534,6 +534,7 @@ margin-left:0px;
 	-webkit-border-radius: 15px 15px 15px 15px;
 	/* para Opera */
 	border-radius: 15px 15px 15px 15px;
+    margin: 0 auto;
 }
 
 #mensajevehiculostexto
