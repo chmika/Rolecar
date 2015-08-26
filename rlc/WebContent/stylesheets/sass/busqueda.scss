@@ -35,6 +35,9 @@
 	&-container-boton.campoleft {
 		overflow: initial;
 	}
+	.boton {
+		border: 1px solid black;
+	}
 	&-container-checkbox {
 		width: 100%;
 		overflow: hidden;
@@ -64,7 +67,12 @@
 }
 .amp-formulario-buscador-check-input:checked + .amp-formulario-buscador-check-label:before {
 	content: "\f00c";
-	letter-spacing: 5px; 
+	letter-spacing: 5px;
+	font-size: 14px\9;
+}
+@media all and (-ms-high-contrast:none) {
+	.amp-formulario-buscador-check-input:checked + .amp-formulario-buscador-check-label:before { font-size: 14px } /* IE10 */
+	*::-ms-backdrop, .amp-formulario-buscador-check-input:checked + .amp-formulario-buscador-check-label:before { font-size: 14px; } /* IE11 */
 }
 
 @media (max-width: $mobile) {

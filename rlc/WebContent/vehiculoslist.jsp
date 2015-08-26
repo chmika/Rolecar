@@ -268,7 +268,7 @@ $( document ).ready(function() {
 					
 				</div>
 				<span class="amp-formulario-buscador-title1 hidden-xs hidden-sm">RECOGIDA</span>
-				<span class="amp-formulario-buscador-title2 hidden-xs hidden-sm">DEVOLUCION</span>
+				<span class="amp-formulario-buscador-title2 hidden-xs hidden-sm">DEVOLUCIÓN</span>
 				<div id="Campos">
 				    <div class="campoleft visible col-xs-12 col-sm-12">      
 						<input id="station"  name="station" class="cajas amp-formulario-buscador-estacion col-xs-12 col-sm-12" type="text" placeholder="<fmt:message key='busqueda.station.text'/>" />
@@ -286,14 +286,14 @@ $( document ).ready(function() {
 					</div>
 					<span class="amp-formulario-buscador-title1 hidden-md hidden-lg col-xs-10 col-xs-offset-2 col-sm-11 col-sm-offset-1-1">RECOGIDA</span>
 					<div class="campoleft amp-space-left-30 col-xs-2 col-sm-1">
-						  <span class="input-group amp-boton-icono col-xs-12 col-sm-12"><i class="fa fa-calendar fa-fw"></i></span>
+						  <span class="input-group amp-boton-icono amp-boton-icono-calendar col-xs-12 col-sm-12"></span>
 				    </div>
 				    <div class="campoleft amp-width-75 amp-space-left-10 col-xs-10 col-sm-5 col-md-1">
 						  <input id="fini"  name="fini" class="amp-formulario-buscador-calendario-input control-fecha amp-width-100" type="text" readonly />
 					</div>
 					<div class="campoleft  amp-space-left-10 col-xs-2 col-sm-1">
 					   		
-					   	<span class="input-group amp-boton-icono col-xs-12 col-sm-12"><i class="fa fa-clock-o fa-fw"></i></span>
+					   	<span class="input-group amp-boton-icono amp-boton-icono-clock col-xs-12 col-sm-12"></span>
 					   	
 					</div>
 					<div class="campoleft amp-space-left-10 col-xs-10 col-sm-5">		
@@ -329,16 +329,16 @@ $( document ).ready(function() {
 						<input type="hidden" id="hini" name="hini" />
 						<input type="hidden" id="mini" name="mini" />
 					</div>
-					<span class="amp-formulario-buscador-title2 hidden-md hidden-lg col-xs-10 col-xs-offset-2 col-sm-11 col-sm-offset-1-1">DEVOLUCION</span>
+					<span class="amp-formulario-buscador-title2 hidden-md hidden-lg col-xs-10 col-xs-offset-2 col-sm-11 col-sm-offset-1-1">DEVOLUCIÓN</span>
 					<div class="campoleft amp-space-left-30 col-xs-2 col-sm-1">
-					        <span class="input-group amp-boton-icono col-xs-12 col-sm-12"><i class="fa fa-calendar fa-fw"></i></span>
+					        <span class="input-group amp-boton-icono amp-boton-icono-calendar col-xs-12 col-sm-12"></span>
 					        
 					</div>
 					<div class="campoleft amp-width-75 amp-space-left-10 col-xs-10 col-sm-5 col-md-1">
 							<input id="ffin" name="ffin" type="text"  class="amp-formulario-buscador-calendario-input amp-width-100" readonly />
 					</div>
 					<div class="campoleft amp-space-left-10 col-xs-2 col-sm-1">
-					    <span class="input-group amp-boton-icono col-xs-12 col-sm-12"><i class="fa fa-clock-o fa-fw"></i></span>
+					    <span class="input-group amp-boton-icono amp-boton-icono-clock col-xs-12 col-sm-12"></span>
 					    
 					</div>
 					<div class="campoleft amp-space-left-10 col-xs-10 col-sm-5">
@@ -811,9 +811,9 @@ $( document ).ready(function() {
 			<div class="amp-text-information-content">
 				<div class="amp-text-information-head">Rolecar se adapta a ti<i></i></div>
 				<div>
-					<h2>Rolecar te ofrece la mejor tarifa! ¡Sin intermediarios!</h2>
+					<h2>¡Rolecar te ofrece la mejor tarifa! ¡Sin intermediarios!</h2>
 					<p>Consigue descuentos de hasta un 70% y reservalo directamente. Negociamos con las mejores compañías de alquiler para ofrecerte el mejor precio.</p>
-					<a href="leerMas.html" class="amp-text-information-button">Leer Más</a>
+<!-- 					<a href="leerMas.html" class="amp-text-information-button">Leer Más</a> -->
 					
 				</div>
 			</div>

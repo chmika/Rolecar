@@ -53,7 +53,9 @@
     text-align: center;
 	cursor: pointer;
 }
-
+.resumen p {
+    margin-bottom: 10px;
+}
 
 .list-detail p.similar {
     line-height: 1.84em;
@@ -184,6 +186,7 @@ ul.bullet li{
 
 .contentlistado
 {
+    overflow: hidden;
     margin-bottom:20px;
 	
 }

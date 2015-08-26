@@ -2005,14 +2005,21 @@ input {
   font-size: 1.4em; }
 
 .amp-boton-icono {
-  width: 33px;
+  width: 34px;
+  height: 33px;
   padding: 7px 4px;
-  border: 1px solid #e3e3e3;
+  border: 1px solid black;
   display: table-cell;
-  background: #61b4d4;
   color: white;
   font-size: 1.36em;
-  text-align: center; }
+  text-align: center;
+  background-color: #61b4d4;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  .amp-boton-icono-clock {
+    background-image: url("../images/icon-clock.png"); }
+  .amp-boton-icono-calendar {
+    background-image: url("../images/icon-calendar.png"); }
 
 @media (min-width: 1023px) and (max-width: 1254px) {
   .amp-boton-icono {
@@ -2192,6 +2199,8 @@ input {
       background-color: #e3e3e3; }
   .amp-formulario-buscador-container-boton.campoleft {
     overflow: initial; }
+  .amp-formulario-buscador .boton {
+    border: 1px solid black; }
   .amp-formulario-buscador-container-checkbox {
     width: 100%;
     overflow: hidden; }
@@ -2215,8 +2224,18 @@ input {
 
 .amp-formulario-buscador-check-input:checked + .amp-formulario-buscador-check-label:before {
   content: "\f00c";
-  letter-spacing: 5px; }
+  letter-spacing: 5px;
+  font-size: 14px\9; }
 
+@media all and (-ms-high-contrast: none) {
+  .amp-formulario-buscador-check-input:checked + .amp-formulario-buscador-check-label:before {
+    font-size: 14px; }
+
+  /* IE10 */
+  *::-ms-backdrop, .amp-formulario-buscador-check-input:checked + .amp-formulario-buscador-check-label:before {
+    font-size: 14px; }
+
+  /* IE11 */ }
 @media (max-width: 599px) {
   .amp-formulario-buscador-check-label:before {
     margin-left: 9px; } }
@@ -2276,8 +2295,7 @@ input {
     padding-top: 5px; }
   .amp-lista-condiciones {
     display: block;
-    color: #4b8ceb;
-    color: red; }
+    color: #4b8ceb; }
   .amp-lista-precio {
     margin: 5px 0; }
     .amp-lista-precio-input {
@@ -2456,6 +2474,9 @@ input {
   .amp-text-information-button:hover {
     background: #61b4d4;
     color: white; }
+
+#dialog-condiciones {
+  min-width: 100%; }
 
 @media (max-width: 599px) {
   .leftcond, .rightcond {
